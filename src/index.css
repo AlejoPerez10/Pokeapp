@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  font-family: 'Pokemon solid', nunito, sans-serif;
+  letter-spacing: 0.25rem;
+}
+
+*,
+*::before,
+*::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+progress::-webkit-progress-bar {
+  margin-top: 7px;
+  background-color: #dedede; /* Color de fondo de la barra */
+  border-radius: 10px; /* Bordes redondeados */
+  height: 8px; /* Altura de la barra */
+}
+
+/* Estilo para la parte que indica el progreso */
+progress::-webkit-progress-value {
+  background-color: rgb(46, 101, 255); /* Color del progreso */
+  border-radius: 10px; /* Bordes redondeados */
+}
