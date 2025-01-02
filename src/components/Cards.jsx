@@ -18,6 +18,7 @@ const colors = {
 const Cards = () => {
 
     const [pokemons, setPokemons] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchPokemonsData = async () => {
@@ -49,11 +50,12 @@ const Cards = () => {
                         }
                     })
                 );
-
+                setLoading(false);
                 setPokemons(pokemonData);
 
             } catch (e){
-                console.error('Error: ', e)
+                setLoading(true);
+                console.error('Error: ', e);
             }
 
             
@@ -61,6 +63,14 @@ const Cards = () => {
 
         fetchPokemonsData()
     }, []);
+
+    if(loading){
+        return(
+            <section className='flex justify-center items-center h-screen w-full z-20'>
+                <h2 className='text-2xl md:text-5xl text-white'>LOADING...</h2>
+            </section>
+        )
+    }
     
     return (
         <section className="grid grid-cols-[repeat(auto-fit,_minmax(300px,350px))] gap-x-14 gap-y-24 justify-center items-center pt-52 md:pt-64 px-44 ">
