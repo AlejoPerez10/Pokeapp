@@ -131,10 +131,10 @@ const Cards = () => {
                     <img
                         src={pokemon.sprites.other['official-artwork'].front_default}
                         alt={`Imagen del Pokemon ${pokemon.name}`}
-                        className="absolute bottom-[390px] md:bottom-[450px] right-1/2 translate-x-1/2 mx-auto size-40 md:size-48"
+                        className="absolute bottom-[370px] md:bottom-[450px] right-1/2 translate-x-1/2 mx-auto size-40 md:size-48"
                         loading='lazy'
                     />
-                    <h3 className='text-xs md:text-base absolute bottom-[420px] md:bottom-[485px] left-4 border-2 bg-white rounded-md text-black shadow-[inset_5px_5px_10px_rgba(0,0,0)] px-3 border-none p-1 font-[PokemonSolid] tracking-[0.15rem]'>{pokemon.id}</h3>
+                    <h3 className='text-xs md:text-base absolute bottom-[405px] md:bottom-[485px] left-4 border-2 bg-white rounded-md text-black shadow-[inset_5px_5px_10px_rgba(0,0,0)] px-3 border-none p-1 font-[PokemonSolid] tracking-[0.15rem]'>{pokemon.id}</h3>
                     <h3 className="text-xl md:text-2xl font-bold text-black mb-3 mt-[-5px] font-[PokemonSolid] tracking-[0.25rem]">{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h3>
                     <h4 className='text-xs md:text-base font-[Nunito]'><span className='font-bold'>Hábitat:</span> {pokemon.habitat.charAt(0).toUpperCase() + pokemon.habitat.slice(1)}</h4>
                     <h4 className='text-xs md:text-base font-[Nunito]'><span className='font-bold'>Altura:</span> {(pokemon.height / 10)} m</h4>
@@ -153,7 +153,7 @@ const Cards = () => {
                     
                     <div className='flex w-full justify-between mt-3 '>
                         {pokemon.types.map((type, index) => (
-                            <div key={index} className='h-10 font-[PokemonSolid] tracking-[0.15rem] text-xs md:text-base text-black rounded-md px-2 shadow-[inset_5px_5px_10px_black] p-1'
+                            <div key={index} className='h-7 md:h-10 font-[PokemonSolid] tracking-[0.15rem] text-xs md:text-base text-black rounded-md px-2 shadow-[inset_5px_5px_10px_black] p-1'
                                 style={{backgroundColor:typeColors[type.type.name] || '#3c3c3c'}}
                             >
                                 {type.type.name}
