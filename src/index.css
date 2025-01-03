@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 :root{
-  font-family: 'Pokemon solid', nunito, sans-serif;
-  letter-spacing: 0.25rem;
+  font-family: nunito, sans-serif;
 }
 
 *,
@@ -15,8 +14,29 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'PokemonHollow';
+  src: url('/assets/fonts/PokemonHollow.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PokemonSolid';
+  src: url('/assets/fonts/PokemonSolid.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/assets/fonts/Nunito.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 progress::-webkit-progress-bar {
-  margin-top: 7px;
+  margin-top: 3px;
   background-color: #dedede; /* Color de fondo de la barra */
   border-radius: 10px; /* Bordes redondeados */
   height: 8px; /* Altura de la barra */
